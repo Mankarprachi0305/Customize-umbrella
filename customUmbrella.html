@@ -1,0 +1,55 @@
+<!-- TODO: Cannot use outline image when image is spin because outline image not provided, I've used similar colorful image on upload icon as well as loading image when image are spin-->
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Custom Umbrella</title>
+</head>
+<link rel="stylesheet" href="customUmbrella.css" />
+
+<body>
+    <div class="container">
+        <aside class="aside">
+            <div class="umbrella-container">
+                <img class="loadedImage" id="image" src="images/blue-umbrella.png" alt="Umbrella Image" />
+                <img id="logo-preview" src="" alt="Logo Preview" class="logo-preview" />
+            </div>
+        </aside>
+        <div class="rightDiv">
+            <h1>Custom Umbrella</h1>
+
+            <div class="color-buttons">
+                <div id="pink-button" class="color-button"
+                    onclick="changeImageAndColor('#ff4081', '#ffc1e3', 'images/pink-umbrella.png', 'animation: shrink-spin-normal-spin 5s linear 1')">
+                </div>
+                <div id="blue-button" class="color-button"
+                    onclick="changeImageAndColor('#2196f3', '#c7dcff', 'images/blue-umbrella.png', 'animation: shrink-spin-normal-spin 5s linear 1')">
+                </div>
+                <div id="yellow-button" class="color-button"
+                    onclick="changeImageAndColor('#ffc107', '#ffecb3', 'images/yellow-umbrella.png', 'animation: shrink-spin-normal-spin 5s linear 1')">
+                </div>
+            </div>
+
+            <h4>Customize your umbrella</h4>
+            <p class="upload-text">Upload a logo for an instant preview.</p>
+            <p class="upload-instruction">
+                .png & .jpg files only. Max file size is 5MB.
+            </p>
+
+            <div id="uploadLogo">
+                <label for="upload-input" id="upload-label" class="logo-button">
+                    <button id="upload-button" class="logo-button" onclick="handleUploadButtonClick()">
+                        <img id="uploadIcon" src="images/upload_icon.svg" alt="Upload Icon" class="upload-icon">
+                        <span id="upload-icon">Upload Logo</span>
+                    </button>
+                    <input type="file" id="upload-input" accept=".jpg, .png" style="display: none;"
+                        onchange="handleFileUpload(event)" />
+                </label>
+            </div>
+        </div>
+    </div>
+    <script src="customUmbrella.js"></script>
+</body>
+
+</html>
